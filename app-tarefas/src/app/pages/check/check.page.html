@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>CheckList</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button color="primary"> Incluir Tarefa </ion-button>
+  <ion-item *ngFor="let tarefa of tarefas">
+    <ion-checkbox color="danger">{{tarefa.descricao}}</ion-checkbox>
+    <ion-label>{{tarefa.descricao}}</ion-label>
+    <ion-button color="success"> Alterar </ion-button>
+    <ion-button color="danger"> Excluir </ion-button>
+  </ion-item>
+</ion-content>
+
